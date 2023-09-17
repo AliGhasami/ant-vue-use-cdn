@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://unpkg.com/ant-design-vue@3.2.15/dist/antd.variable.min.css" />
+<script src="https://unpkg.com/dayjs/dayjs.min.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/customParseFormat.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/weekday.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/localeData.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/weekOfYear.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/weekYear.js"></script>
+<script src="https://unpkg.com/dayjs/plugin/advancedFormat.js"></script>
+<!--<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+      "antd": "./dist/antd.js"
+    }
+  }
+</script>-->
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://unpkg.com/ant-design-vue@3.2.15/dist/antd.min.js"></script>
+<!--https://unpkg.com/browse/ant-design-vue@3.2.15/dist/antd.css-->
+<!--<script src="./dist/antd.min.js"></script>-->
+
+
+<div id="app">{{ message }}
+    <a-button type="primary">1111</a-button>
+    <a-input></a-input>
+    <Button type="primary">222</Button>
+<template>
+
+</template>
+</div>
+
+<script type="module">
+    const { createApp } = Vue
+    const {Button} = antd
+    //console.log("aaa",Button)
+    createApp({
+        data() {
+            return {
+                message: 'Hello Vue!'
+            }
+        },components:{
+            Button
+        }
+    }).use(antd).mount('#app')
+ /* import { createApp } from 'vue'
+ // import {} from './dist/antd.js'
+  //import {Button} from 'antd'
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+  //console.log("anddd,antd",antd)*/
+</script>
+
+
+
